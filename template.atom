@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{=it.title}}</title>
+	<subtitle>{{=it.description}}</subtitle>
+	<link href="{{=it.url}}/feed.xml" rel="self" type="application/atom+xml" />
+	<link href="{{=it.url}}" rel="alternate" type="text/html" />
+	<updated>{{# new Date()}}</updated>
+	<generator uri="https://github.com/nkoehring/dandelion-feed-generator/" version="0.1.0">Dandelion Feed Generator</generator>
+	<id>{{=it.url}}</id>
+
+	{{~it.items.reverse() :item:index}}
+	<entry>
+		<title>{{=item.title}}</title>
+		<summary>{{=item.description}}</summary>
+		<updated>{{=item.date}}</updated>
+		<link href="{{=item.url}}" />
+		<id>{{=item.url}}</id>
+	</entry>
+	{{~}}
+
+</feed>

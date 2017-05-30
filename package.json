@@ -1,0 +1,13 @@
+{
+  "name": "dandelion-feed-gen",
+  "version": "0.0.1",
+  "description": "generate JSON and RSS feeds for Dandelion",
+  "main": "index.js",
+  "author": "koehr <n@koehr.in>",
+  "license": "MIT",
+  "dependencies": {
+    "dateformat": "^2.0.0",
+    "dot": "^1.1.2",
+    "node-fetch": "^1.7.0"
+  }
+}
